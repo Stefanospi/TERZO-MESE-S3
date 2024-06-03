@@ -5,7 +5,7 @@ import { PostDetailComponent } from './post-detail.component';
 
 const routes: Routes = [
   {
-    path: 'post/:id',
+    path: '',
     component: PostDetailComponent,
   },
 ];

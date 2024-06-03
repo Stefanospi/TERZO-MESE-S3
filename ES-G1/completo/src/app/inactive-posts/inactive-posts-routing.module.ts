@@ -4,7 +4,7 @@ import { InactivePostsComponent } from './inactive-posts.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: 'inactive', component: InactivePostsComponent },
+  { path: '', component: InactivePostsComponent },
 ];
 @NgModule({
   declarations: [],

@@ -5,7 +5,7 @@ import { Route, RouterModule } from '@angular/router';
 
 const routes: Route[] = [
   {
-    path: 'active',
+    path: '',
     component: ActivePostsComponent,
   }
 ];
