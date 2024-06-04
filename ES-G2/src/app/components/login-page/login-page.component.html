@@ -1,0 +1,47 @@
+
+<form [formGroup]="loginPage" (ngSubmit)="onSubmit()">
+  <div formGroupName="fullName">
+    <div>
+      <input formControlName="nome" type="text" />
+    </div>
+    <div>
+      <input formControlName="cognome" type="text" />
+    </div>
+  </div>
+  <div formGroupName="authData">
+    <div>
+      <input formControlName="email" type="text" />
+    </div>
+    <div>
+      <input formControlName="password" type="password" />
+    </div>
+    <div>
+      <input formControlName="confermaPassword" type="password" />
+    </div>
+  </div>
+  <div>
+    <select formControlName="genere">
+      <option value="x" selected disabled>Scegli il tuo genere</option>
+      <option value="uomo">Uomo</option>
+      <option value="donna">Donna</option>
+    </select>
+  </div>
+  <div>
+    <input formControlName="immagineProfilo" type="file" />
+  </div>
+  <div>
+    <input formControlName="biografia" type="textarea" />
+  </div>
+  <div>
+    <input formControlName="username" type="textarea" />
+  </div>
+  <button type="submit">INVIA</button>
+</form>
+
+<!--
+  Appunti:
+  formGroup: è il riferimento ts che assegno a tutto il form
+  formControlName:è il riferimento ts che assegno al singolo input
+  formGroupName: è il riferimento a più input che permette di raggruppare più input dentro un oggetto
+
+ -->
