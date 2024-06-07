@@ -1,0 +1,39 @@
+<section>
+<h1>Dashboard</h1>
+<div class="row mb-2">
+  <div class="col">
+    <h3 class="fst-italic">Benvenuto {{ user.nome }}!</h3>
+    <div class="col-1 d-flex flex-column">
+      <p class="fst-italic">lista amici</p>
+      <button routerLink="userpage" class="btn btn-outline-danger w-75">
+        Amici
+      </button>
+    </div>
+    <div class="col-1 d-flex flex-column mt-2">
+      <p class="fst-italic">Aggiungi i tuoi film:</p>
+      <button routerLink="addmovie" class="btn btn-outline-danger w-75">
+        Lista
+      </button>
+    </div>
+    <div class="col-1 d-flex flex-column mt-2">
+      <p class="fst-italic">Informazioni personali</p>
+      <button routerLink="personalpage" class="btn btn-outline-danger w-75">
+        Info
+      </button>
+    </div>
+  </div>
+</div>
+<div class="row row-cols-4">
+  <div class="card me-4" *ngFor="let movie of moviesList">
+    <img src="{{ movie.image }}" class="card-img-top" alt="..." />
+    <div class="card-body d-flex flex-column justify-content-evenly">
+      <h5 class="card-title">{{ movie.title }}</h5>
+      <p class="card-text">{{ movie.duration }}</p>
+      <a class="btn btn-primary mb-2">{{ movie.rating }}/5</a>
+      <a routerLink="moviedetail/{{ movie.id }}" class="btn btn-primary"
+        >Info</a
+      >
+    </div>
+  </div>
+</div>
+</section>

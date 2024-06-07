@@ -1,0 +1,17 @@
+<div class="row">
+  <h1 class="fst-italic">Lista amici:</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let user of allUsers">
+      <tr>
+        <td>{{ user.nome }}</td>
+        <td>{{ user.email }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,36 @@
+<section>
+  <form>
+    <input
+      [(ngModel)]="newMovie.title"
+      type="text"
+      name="titolo"
+      class="form-control mb-2"
+      placeholder="Aggiungi il titolo"
+    />
+
+    <input
+      [(ngModel)]="newMovie.duration"
+      type="text"
+      name="durata"
+      class="form-control mb-2"
+      placeholder="Aggiungi la durata"
+    />
+
+    <input
+      [(ngModel)]="newMovie.image"
+      type="text"
+      name="UrlImg"
+      class="form-control mb-2"
+      placeholder="Aggiungi l'url dell'immagine"
+    />
+
+    <input
+      [(ngModel)]="newMovie.rating"
+      type="number"
+      name="rating"
+      class="form-control mb-2"
+      placeholder="Quanto lo valuti?"
+    />
+    <button class="btn btn-success" (click)="createMovieAndLoad()">Crea</button>
+  </form>
+</section>

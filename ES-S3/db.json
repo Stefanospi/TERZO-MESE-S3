@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "email": "example@example.com",
+      "password": "$2a$10$gt3YP8wv/90T3jPi2fDTku1vtUshNmaDQkXQJenV7NkX.xQZZuNiS",
+      "nome": "Stefano",
+      "id": 1
+    },
+    {
+      "email": "mariorossi@example.com",
+      "password": "$2a$10$ZqpnNOk38Inl65TCF4z/k.IZw1LRKkzJmf1yZa9m66ob9jsakH8Lm",
+      "nome": "Mario",
+      "id": 2
+    }
+  ],
+  "movies-popular": [
+    {
+      "title": "Avengers: End Game",
+      "duration": "3 ore e 1 minuto",
+      "image": "https://pad.mymovies.it/filmclub/2018/12/029/locandina.jpg",
+      "description": "",
+      "rating": 5,
+      "id": 1
+    },
+    {
+      "title": "Avengers: Infinity War",
+      "duration": "2 ore e 29 minuti",
+      "image": "https://m.media-amazon.com/images/S/pv-target-images/da304fdb0473951af66e371fcd60f956896514678ec31d751178cabe8dd96777.jpg",
+      "description": "",
+      "rating": 5,
+      "id": 2
+    }
+  ],
+  "favorites":[]
+}
