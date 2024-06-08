@@ -29,7 +29,23 @@
       "description": "",
       "rating": 5,
       "id": 2
+    },
+    {
+      "title": "Spider-Man: Homecoming",
+      "duration": "2 ore e 13 minuti",
+      "image": "https://pad.mymovies.it/filmclub/2015/02/070/locandina.jpg",
+      "description": "",
+      "rating": 5,
+      "id": 3
+    },
+    {
+      "title": "Dragon Ball Super - Broly",
+      "duration": "1 ora e 40 minuti",
+      "image": "https://i0.wp.com/www.nerdpool.it/wp-content/uploads/2019/01/3479686-3460642-dragonballsuperbroly.jpg?resize=696%2C392&ssl=1",
+      "description": "",
+      "rating": 4,
+      "id": 4
     }
   ],
-  "favorites":[]
+  "favorites": []
 }

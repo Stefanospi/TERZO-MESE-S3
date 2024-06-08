@@ -21,6 +21,7 @@ export class AuthService {
 
   user$ = this.authSubject.asObservable()//contiene i dati dell'utente loggato oppure null
 
+  subscribeUser = new BehaviorSubject<iUser | null>(null);
   isLoggedIn$ = this.user$.pipe(
     map(user => !!user),
     tap(user => this.syncIsLoggedIn = user)

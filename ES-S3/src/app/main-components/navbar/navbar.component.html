@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-sm bg-body-tertiary">
+<nav class="navbar navbar-expand-sm bg-personal">
   <div class="container-fluid">
-    <a class="navbar-brand" routerLink="/">Cinema Paradiso</a>
+    <a class="navbar-brand text-light" routerLink="/">Cinema Paradiso</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -15,13 +15,47 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" routerLink="auth">Accedi</a>
+          <a class="nav-link text-light" *ngIf="isLoggedIn" routerLink="dashboard"
+            >Dashboard</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="dashboard">Dashboard</a>
+          <a
+            class="nav-link text-light"
+            *ngIf="isLoggedIn"
+            routerLink="dashboard/personalpage"
+            >Profilo</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link text-light"
+            *ngIf="isLoggedIn"
+            routerLink="dashboard/favorites"
+            >Film</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" *ngIf="isLoggedIn" routerLink="dashboard/addmovie"
+            >Aggiungi Film</a
+          >
         </li>
       </ul>
     </div>
-    <button (click)="logout()" class="btn btn-outline-danger">Logout</button>
+    <button (click)="logout()" class="btn btn-outline-danger" *ngIf="isLoggedIn">Logout</button>
+    <button
+      *ngIf="!isLoggedIn"
+      routerLink="auth/login"
+      class="btn btn-outline-light me-2"
+    >
+      Accedi
+    </button>
+    <button
+      *ngIf="!isLoggedIn"
+      routerLink="auth/register"
+      class="btn btn-outline-light"
+    >
+      Registrati
+    </button>
   </div>
 </nav>

@@ -5,13 +5,15 @@ import { addMovieComponent } from './addmovie/addmovie.component';
 import { MoviedetailComponent } from './moviedetail/moviedetail.component';
 import { UserpageComponent } from './userspage/userpage.component';
 import { PersonalpageComponent } from './personalpage/personalpage.component';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'addmovie', component: addMovieComponent },
   { path: 'moviedetail/:id', component: MoviedetailComponent },
   { path: 'userpage', component: UserpageComponent },
-  { path: 'personalpage', component: PersonalpageComponent}
+  { path: 'personalpage', component: PersonalpageComponent},
+  { path: 'favorites', component: FavoritesComponent}
 ];
 
 @NgModule({

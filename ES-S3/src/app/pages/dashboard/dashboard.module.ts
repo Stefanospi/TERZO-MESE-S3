@@ -9,6 +9,7 @@ import { UserpageComponent } from './userspage/userpage.component';
 import { Page404Component } from './page404/page404.component';
 import { FormsModule } from '@angular/forms';
 import { PersonalpageComponent } from './personalpage/personalpage.component';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 
 
@@ -20,6 +21,7 @@ import { PersonalpageComponent } from './personalpage/personalpage.component';
     UserpageComponent,
     Page404Component,
     PersonalpageComponent,
+    FavoritesComponent,
 
 
   ],

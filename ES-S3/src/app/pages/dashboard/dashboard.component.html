@@ -23,16 +23,18 @@
     </div>
   </div>
 </div>
-<div class="row row-cols-4">
+<div class="row row-cols-5 justify-content-center mt-5">
   <div class="card me-4" *ngFor="let movie of moviesList">
-    <img src="{{ movie.image }}" class="card-img-top" alt="..." />
-    <div class="card-body d-flex flex-column justify-content-evenly">
+    <img src="{{ movie.image }}" class="card-img-top card-img-top w-100 h-100" alt="..." />
+    <div class="card-body d-flex flex-column justify-content-around rounded-2">
       <h5 class="card-title">{{ movie.title }}</h5>
       <p class="card-text">{{ movie.duration }}</p>
       <a class="btn btn-primary mb-2">{{ movie.rating }}/5</a>
       <a routerLink="moviedetail/{{ movie.id }}" class="btn btn-primary"
         >Info</a
       >
+      <button *ngIf="!isFavorite(movie)" (click)="addToFavorite(movie)" class="btn btn-primary">Favorite</button>
+      <button *ngif="isFavorite(movie)" (click)="removeFromFavorite(movie.id)" class="btn btn-primary">Remove</button>
     </div>
   </div>
 </div>

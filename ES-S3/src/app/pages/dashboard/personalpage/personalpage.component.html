@@ -1,15 +1,21 @@
 <section class="vh-100">
   <h1 class="fst-italic">Pagina personale</h1>
   <div class="row">
-    <div class="col">
-      <h3 class="fst-italic">{{ user.nome }}</h3>
-      <h4 class="fst-italic">{{ user.email }}</h4>
-      <h2>I tuoi film preferiti:</h2>
-      <ul class="list-group">
-        <!-- <li *ngFor="let movie of favMovies">
-        {{ movie.title }}
-      </li> -->
-      </ul>
+    <div class="col d-flex flex-column">
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="https://semantic-ui.com/images/avatar2/large/elyse.png" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{user.nome}}</h5>
+              <p class="card-text">{{user.email}}</p>
+              <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

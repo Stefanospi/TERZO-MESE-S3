@@ -1,9 +1,59 @@
-<div class="vh-100">
+<section>
   <div class="container">
-    <h1 class="fst-italic">Benvenuto!</h1>
-    <p class="fw-bold">
-      Esegui il login per poter usufruire di tutti i servizi!
-    </p>
-
+    <div class="row">
+      <h1 class="fst-italic">Benvenuto!</h1>
+      <div class="col-6">
+        <p class="fst-italic">
+          Benvenuti a Cinema Paradiso Scoprite l'emozione del grande schermo al
+          Cinema Paradiso, dove ogni film diventa un'esperienza indimenticabile.
+          Con una selezione dei migliori film internazionali e nazionali,
+          tecnologia all'avanguardia e comfort eccezionale, siamo il vostro
+          rifugio perfetto per una serata cinematografica unica. Venite a
+          trovarci e lasciatevi trasportare dalla magia del cinema!
+        </p>
+      </div>
+      <div class="col-6">
+        <img src="https://hypercritic.org/wp-content/uploads/2022/11/logo-cinema-paradiso.jpg" class="img-fluid rounded-3 shadow"alt="cinema" />
+      </div>
+      <p class="fw-bold" *ngif="!isLoggedIn">
+        Esegui il login per poter usufruire di tutti i servizi!
+      </p>
+    </div>
+    <h3 *ngif="isLoggedIn" class="fst-italic">
+      Film presenti nella tua lista:
+    </h3>
+    <div *ngIf="isLoggedIn" class="row row-cols-5">
+      <div class="card me-4 g-3" *ngFor="let movie of moviesList">
+        <img
+          src="{{ movie.image }}"
+          class="card-img-top w-100 h-100"
+          alt="..."
+        />
+        <div
+          class="card-body d-flex flex-column justify-content-around rounded-2"
+        >
+          <h5 class="card-title">{{ movie.title }}</h5>
+          <p class="card-text">{{ movie.duration }}</p>
+          <a class="btn btn-primary mb-2">{{ movie.rating }}/5</a>
+          <a routerLink="moviedetail/{{ movie.id }}" class="btn btn-primary"
+            >Info</a
+          >
+          <button
+            *ngIf="!isFavorite(movie)"
+            (click)="addToFavorite(movie)"
+            class="btn btn-primary"
+          >
+            Favorite
+          </button>
+          <button
+            *ngif="isFavorite(movie)"
+            (click)="removeFromFavorite(movie.id)"
+            class="btn btn-primary"
+          >
+            Remove
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
